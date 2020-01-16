@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pfy.blog.service.PictureService">
+    <select id="getAboutPicture" resultType="String">
+        select picture from about limit 1
+    </select>
+    <select id="getVisitorPicture" resultType="String">
+        select picture from visitor limit 2
+    </select>
+</mapper>

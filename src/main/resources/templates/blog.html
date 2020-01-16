@@ -91,7 +91,7 @@
               <h3 class="ui dividing header">评论</h3>
               <div class="comment" th:each="comment:${comments}">
                 <a class="avatar">
-                  <img src="https://unsplash.it/100/100?image=1005" th:src="*{comment.getUser()}==null ? 'https://c-ssl.duitang.com/uploads/item/201805/26/20180526235140_sxdrU.thumb.700_0.jpeg' : ${comment.getUser().getPicture()}">
+                  <img src="https://unsplash.it/100/100?image=1005" th:src="*{comment.getUser()}==null ? ${pictures.get(0)} : ${comment.getUser().getPicture()}">
                 </a>
                 <div class="content">
                   <a class="author" >
@@ -111,7 +111,7 @@
                 <div class="comments" th:each="reply:${comment.getReplies()}">
                   <div class="comment">
                     <a class="avatar">
-                      <img src="https://unsplash.it/100/100?image=1005" th:src="*{reply.getUser()}==null ? 'https://c-ssl.duitang.com/uploads/item/201805/26/20180526235140_HX2Pr.thumb.700_0.jpeg' : ${reply.getUser().getPicture()}">
+                      <img src="https://unsplash.it/100/100?image=1005" th:src="*{reply.getUser()}==null ? ${pictures.get(1)} : ${reply.getUser().getPicture()}">
                     </a>
                     <div class="content">
                       <a class="author" >

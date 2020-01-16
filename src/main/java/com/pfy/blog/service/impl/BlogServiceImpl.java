@@ -33,5 +33,4 @@ public class BlogServiceImpl {
     public List<Blog> selectNewBlog(){return blogService.selectNewBlog();}
     public List<Blog> searchBlog(String query){return blogService.selectBlogBySearch(query);}
     public void addView(int blog_id){blogService.addView(blog_id);}
-    public String getPicture(){return blogService.getPicture();}
 }

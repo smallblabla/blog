@@ -78,9 +78,4 @@
     <update id="addView" parameterType="int">
         update blog set views=views+1 where id=#{blog_id}
     </update>
-
-    <select id="getPicture" resultType="String">
-        select picture from visitor order by rand() limit 1
-    </select>
-
 </mapper>

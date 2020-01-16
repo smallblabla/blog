@@ -21,5 +21,4 @@ public interface BlogService {
      List<Blog> selectNewBlog();
      List<Blog> selectBlogBySearch(String query);
      void addView(int blog_id);
-     String getPicture();
 }

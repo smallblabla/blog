@@ -4,10 +4,8 @@ import com.pfy.blog.entity.Blog;
 import com.pfy.blog.entity.Comment;
 import com.pfy.blog.entity.Reply;
 import com.pfy.blog.entity.User;
-import com.pfy.blog.service.impl.BlogServiceImpl;
-import com.pfy.blog.service.impl.CommentServiceImpl;
-import com.pfy.blog.service.impl.ReplyServiceImpl;
-import com.pfy.blog.service.impl.UserServiceImpl;
+import com.pfy.blog.service.PictureService;
+import com.pfy.blog.service.impl.*;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,10 +26,13 @@ public class BlogsController {
     ReplyServiceImpl replyServiceImpl;
     @Autowired
     private UserServiceImpl userServiceImpl;
+    @Autowired
+    private PictureServiceImpl pictureServiceImol;
 
 
     @RequestMapping("/blog/{id}")
     public String blog(Model model, @PathVariable int id){
+        List<String> pictures = pictureServiceImol.getVisitorPicture();
         User user = userServiceImpl.getUser();
         user.setPassword(null);
         model.addAttribute("user",user);
@@ -50,6 +51,7 @@ public class BlogsController {
             }
             comment.setReplies(replies);
         }
+        model.addAttribute("pictures",pictures);
         model.addAttribute("blog",blog);
         model.addAttribute("comments",comments);
         return "blog";
