@@ -17,7 +17,7 @@
         <div class="required field">
           <div class="ui left labeled input">
             <div class="ui selection compact teal basic dropdown label">
-              <input type="hidden" value="原创" name="flag" th:value="*{id}==null ? '' : *{blog.getFlag()}">
+              <input type="hidden" value="原创" name="flag" th:value="*{id}==1 ? '' : *{blog.getFlag()}">
               <i class="dropdown icon"></i>
               <div class="text"  value="原创"></div>
               <div class="menu">
@@ -30,12 +30,13 @@
           </div>
         </div>
 
-        <div class="field">
+        <div class="required field">
           <div id="md-content" style="z-index: 1 !important;">
             <textarea placeholder="博客内容" name="content" style="display: none" th:text="*{id}==null ? '' : *{blog.getContent()}">
             </textarea>
           </div>
         </div>
+
 
         <div class="two fields">
           <div class="field">
@@ -136,6 +137,7 @@
         width   : "100%",
         height  : 640,
         syncScrolling : "single",
+//        path    : "../static/lib/editormd/lib/"
         path    : "/lib/editormd/lib/"
       });
     });

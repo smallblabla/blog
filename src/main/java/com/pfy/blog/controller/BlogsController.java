@@ -6,6 +6,7 @@ import com.pfy.blog.entity.Reply;
 import com.pfy.blog.entity.User;
 import com.pfy.blog.service.PictureService;
 import com.pfy.blog.service.impl.*;
+import com.pfy.blog.util.MarkdownUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,6 +39,7 @@ public class BlogsController {
         model.addAttribute("user",user);
         blogServiceImpl.addView(id);
         Blog blog = blogServiceImpl.selectBlogById(id);
+        blog.setContent(MarkdownUtils.markdownToHtmlExtensions(blog.getContent()));
         List<Comment> comments = commentServiceImpl.selectCommentById(id);
         for (Comment comment : comments) {
             List<Reply> replies = replyServiceImpl.selectReply(id,comment.getComment_id());
