@@ -3950,3 +3950,276 @@ public String toString() {
 2020-01-17 17:43:33.372 DEBUG 16008 --- [http-nio-7777-exec-6] c.p.b.s.C.selectCommentById              : ==>  Preparing: select * from comment where blog_id = ? order by create_time desc 
 2020-01-17 17:43:33.372 DEBUG 16008 --- [http-nio-7777-exec-6] c.p.b.s.C.selectCommentById              : ==> Parameters: 1(Integer)
 2020-01-17 17:43:33.373 DEBUG 16008 --- [http-nio-7777-exec-6] c.p.b.s.C.selectCommentById              : <==      Total: 0
+2020-01-26 21:44:45.950  INFO 23156 --- [restartedMain] com.pfy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-O0OUVDJ with PID 23156 (started by MyPc in C:\Users\MyPc\Desktop\新建文件夹\blog)
+2020-01-26 21:44:45.952 DEBUG 23156 --- [restartedMain] com.pfy.blog.BlogApplication             : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-26 21:44:45.953  INFO 23156 --- [restartedMain] com.pfy.blog.BlogApplication             : No active profile set, falling back to default profiles: default
+2020-01-26 21:44:48.524  INFO 23156 --- [restartedMain] com.pfy.blog.BlogApplication             : Started BlogApplication in 3.131 seconds (JVM running for 5.617)
+2020-01-26 21:45:06.921  WARN 23156 --- [http-nio-7777-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [596] milliseconds.
+2020-01-26 21:45:14.674 DEBUG 23156 --- [http-nio-7777-exec-5] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 21:45:14.695 DEBUG 23156 --- [http-nio-7777-exec-5] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 21:45:14.803 DEBUG 23156 --- [http-nio-7777-exec-5] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 21:45:14.868 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 21:45:14.869 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 21:45:15.372 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 21:45:15.375 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 21:45:15.377 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 21:45:15.435 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 21:45:15.440 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:45:15.441 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:45:15.532 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:45:15.533 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:45:15.534 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:45:15.536 DEBUG 23156 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:45:17.594 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:45:17.596 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:45:17.599 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:45:17.601 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:45:17.602 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:45:17.604 DEBUG 23156 --- [http-nio-7777-exec-8] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:45:17.689 ERROR 23156 --- [http-nio-7777-exec-8] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-7777-exec-8] Exception processing template "admin/admin_addBlog": An error happened during template parsing (template: "class path resource [templates/admin/admin_addBlog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/admin_addBlog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "blog.getFlag()" (template: "admin/admin_addBlog" - line 20, col 59)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "blog.getFlag()" (template: "admin/admin_addBlog" - line 20, col 59)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:215) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getFlag() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 73 common frames omitted
+
+2020-01-26 21:45:17.695 ERROR 23156 --- [http-nio-7777-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/admin_addBlog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method call: Attempted to call method getFlag() on null context object
+	at org.springframework.expression.spel.ast.MethodReference.throwIfNotNullSafe(MethodReference.java:154) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:83) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:70) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330) ~[spring-expression-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.ConditionalExpression.executeConditional(ConditionalExpression.java:215) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:77) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2020-01-26 21:48:10.353  INFO 4676 --- [restartedMain] com.pfy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-O0OUVDJ with PID 4676 (started by MyPc in C:\Users\MyPc\Desktop\新建文件夹\blog)
+2020-01-26 21:48:10.358 DEBUG 4676 --- [restartedMain] com.pfy.blog.BlogApplication             : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-26 21:48:10.358  INFO 4676 --- [restartedMain] com.pfy.blog.BlogApplication             : No active profile set, falling back to default profiles: default
+2020-01-26 21:48:12.914  INFO 4676 --- [restartedMain] com.pfy.blog.BlogApplication             : Started BlogApplication in 3.058 seconds (JVM running for 4.9)
+2020-01-26 21:48:47.058  WARN 4676 --- [http-nio-7777-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [584] milliseconds.
+2020-01-26 21:48:55.443 DEBUG 4676 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 21:48:55.463 DEBUG 4676 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 21:48:55.713 DEBUG 4676 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 21:48:55.779 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 21:48:55.780 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 21:48:55.976 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 21:48:55.978 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 21:48:55.979 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 21:48:55.985 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 21:48:55.990 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:48:55.991 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:48:56.041 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:48:56.042 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:48:56.042 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:48:56.044 DEBUG 4676 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:49:00.170 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:49:00.171 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:49:00.173 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:49:00.174 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:49:00.175 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:49:00.176 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:49:11.033 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:49:11.034 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:49:11.037 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:49:11.038 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:49:11.038 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:49:11.040 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:49:20.975 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:49:20.976 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:49:20.978 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:49:20.979 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:49:20.980 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:49:20.982 DEBUG 4676 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:49:23.602 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.s.TagService.selectTags_COUNT      : ==>  Preparing: SELECT count(0) FROM tag 
+2020-01-26 21:49:23.603 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.s.TagService.selectTags_COUNT      : ==> Parameters: 
+2020-01-26 21:49:23.604 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.b.s.TagService.selectTags_COUNT      : <==      Total: 1
+2020-01-26 21:49:23.605 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag LIMIT ? 
+2020-01-26 21:49:23.605 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : ==> Parameters: 5(Integer)
+2020-01-26 21:49:23.705 DEBUG 4676 --- [http-nio-7777-exec-6] c.p.blog.service.TagService.selectTags   : <==      Total: 5
+2020-01-26 21:50:10.963  INFO 19772 --- [restartedMain] com.pfy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-O0OUVDJ with PID 19772 (started by MyPc in C:\Users\MyPc\Desktop\新建文件夹\blog)
+2020-01-26 21:50:10.967 DEBUG 19772 --- [restartedMain] com.pfy.blog.BlogApplication             : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-26 21:50:10.968  INFO 19772 --- [restartedMain] com.pfy.blog.BlogApplication             : No active profile set, falling back to default profiles: default
+2020-01-26 21:50:13.820  INFO 19772 --- [restartedMain] com.pfy.blog.BlogApplication             : Started BlogApplication in 3.365 seconds (JVM running for 4.692)
+2020-01-26 21:50:19.483  WARN 19772 --- [http-nio-7777-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [594] milliseconds.
+2020-01-26 21:50:25.300 DEBUG 19772 --- [http-nio-7777-exec-10] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 21:50:25.320 DEBUG 19772 --- [http-nio-7777-exec-10] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 21:50:25.413 DEBUG 19772 --- [http-nio-7777-exec-10] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 21:50:25.477 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 21:50:25.478 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 21:50:25.689 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 21:50:25.692 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 21:50:25.695 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 21:50:25.748 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 21:50:25.750 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:50:25.750 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:50:25.917 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:50:25.918 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:50:25.918 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:50:25.921 DEBUG 19772 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 21:50:27.812 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 21:50:27.813 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 21:50:27.816 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 21:50:27.817 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 21:50:27.817 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 21:50:27.819 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : <==      Total: 4

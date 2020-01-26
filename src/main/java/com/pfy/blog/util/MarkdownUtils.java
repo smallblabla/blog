@@ -1,6 +1,5 @@
 package com.pfy.blog.util;
 
-import com.sun.org.apache.xalan.internal.lib.Extensions;
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TableBlock;
 import org.commonmark.ext.gfm.tables.TablesExtension;
@@ -84,8 +83,6 @@ public class MarkdownUtils {
                 "| 斯维尔多  | 士大夫  | f啊    |\n" +
                 "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
                 "\n";
-        String a = "[imCoding 爱编程](http://www.lirenmi.cn)";
-        System.out.println(markdownToHtmlExtensions(a));
     }
 
 
