@@ -4223,3 +4223,59 @@ org.springframework.expression.spel.SpelEvaluationException: EL1011E: Method cal
 2020-01-26 21:50:27.817 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
 2020-01-26 21:50:27.817 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
 2020-01-26 21:50:27.819 DEBUG 19772 --- [http-nio-7777-exec-9] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 22:57:10.109  INFO 9884 --- [restartedMain] com.pfy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-O0OUVDJ with PID 9884 (started by MyPc in C:\Users\MyPc\Desktop\新建文件夹\blog\blog)
+2020-01-26 22:57:10.114 DEBUG 9884 --- [restartedMain] com.pfy.blog.BlogApplication             : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-26 22:57:10.115  INFO 9884 --- [restartedMain] com.pfy.blog.BlogApplication             : No active profile set, falling back to default profiles: default
+2020-01-26 22:57:14.972  INFO 9884 --- [restartedMain] com.pfy.blog.BlogApplication             : Started BlogApplication in 6.329 seconds (JVM running for 9.46)
+2020-01-26 22:57:15.985  WARN 9884 --- [http-nio-7777-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [758] milliseconds.
+2020-01-26 22:57:23.726 DEBUG 9884 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 22:57:23.749 DEBUG 9884 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 22:57:24.119 DEBUG 9884 --- [http-nio-7777-exec-2] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 22:57:24.281 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 22:57:24.282 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 22:57:24.849 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 22:57:24.852 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 22:57:24.852 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 22:57:24.867 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 22:57:24.871 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 22:57:24.871 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 22:57:24.937 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 22:57:24.938 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 22:57:24.938 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 22:57:24.940 DEBUG 9884 --- [http-nio-7777-exec-4] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 22:57:28.933 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 22:57:28.935 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 22:57:28.939 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 22:57:28.940 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 22:57:28.940 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 22:57:28.942 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 22:57:40.012 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 22:57:40.013 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 22:57:40.016 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 22:57:40.018 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 22:57:40.019 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 22:57:40.023 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 22:57:40.025 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 22:57:40.025 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 22:57:40.029 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 22:57:40.033 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 22:57:40.033 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 22:57:40.038 DEBUG 9884 --- [http-nio-7777-exec-7] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
+2020-01-26 22:57:50.190 DEBUG 9884 --- [http-nio-7777-exec-8] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 22:57:50.191 DEBUG 9884 --- [http-nio-7777-exec-8] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 22:57:50.193 DEBUG 9884 --- [http-nio-7777-exec-8] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 22:57:55.511 DEBUG 9884 --- [http-nio-7777-exec-9] c.p.blog.service.UserService.selectUser  : ==>  Preparing: select * from user where username = ? 
+2020-01-26 22:57:55.513 DEBUG 9884 --- [http-nio-7777-exec-9] c.p.blog.service.UserService.selectUser  : ==> Parameters: pfy(String)
+2020-01-26 22:57:55.517 DEBUG 9884 --- [http-nio-7777-exec-9] c.p.blog.service.UserService.selectUser  : <==      Total: 1
+2020-01-26 22:57:55.542 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog a, type b WHERE a.type_id = b.type_id 
+2020-01-26 22:57:55.542 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : ==> Parameters: 
+2020-01-26 22:57:55.543 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.s.BlogService.selectAllBlog_COUNT  : <==      Total: 1
+2020-01-26 22:57:55.544 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==>  Preparing: select a.* ,b.* from blog a,type b where a.type_id = b.type_id LIMIT ? 
+2020-01-26 22:57:55.545 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : ==> Parameters: 5(Integer)
+2020-01-26 22:57:55.552 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.BlogService.selectAllBlog  : <==      Total: 1
+2020-01-26 22:57:55.555 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==>  Preparing: select * from tag 
+2020-01-26 22:57:55.556 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : ==> Parameters: 
+2020-01-26 22:57:55.559 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.blog.service.TagService.selectTags   : <==      Total: 37
+2020-01-26 22:57:55.561 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==>  Preparing: select * from type 
+2020-01-26 22:57:55.561 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : ==> Parameters: 
+2020-01-26 22:57:55.565 DEBUG 9884 --- [http-nio-7777-exec-3] c.p.b.service.TypeService.selectTypes    : <==      Total: 4
